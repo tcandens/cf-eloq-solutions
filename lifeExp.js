@@ -50,10 +50,6 @@ var ancestry = JSON.parse(ANCESTRY_FILE);
 var centuries = {},
     lifeExp = {};
 
-var lifes = ancestry.map( function( person ) {
-  return { 'born': person.born, 'died': person.died };
-});
-
 ancestry.forEach( function( person ) {
   var age = person.died - person.born;
   var cent = Math.ceil(person.died / 100);
